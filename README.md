@@ -7,13 +7,13 @@ pip install scrapy
 
 scrapy startproject project_name
 
-
-
 # to crawl a project
 
-
 scrapy crawl posts
-scrapy crawl posts -o posts.json // stores output to json
+
+# stores output to json
+
+scrapy crawl posts -o posts.json 
 
 # getting data from response css selectors
 
@@ -24,6 +24,9 @@ response.css('title::text').get()
 
 # xpath selectors
 
-response.xpath('//h3')   // returns all h3 tags
-response.xpath('//h3/text()').extract() // returns text of all h3 tags
-response.xpath('//h3/text()').getall() // returns text of all h3 tags
+# returns all h3 tags
+response.xpath('//h3')   
+# returns text of all h3 tags
+response.xpath('//h3/text()').extract() 
+# returns text of all h3 tags
+response.xpath('//h3/text()').getall() 
